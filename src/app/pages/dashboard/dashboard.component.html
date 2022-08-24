@@ -1,0 +1,128 @@
+<!-- <div class="status"  [class.offline]="status === OnlineStatusType.OFFLINE">
+  {{ OnlineStatusType.OFFLINE ? 'Offline' : 'Online' }}
+</div> -->
+
+<div class="bg-image">
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-4 col-4">
+            <div class="logo_img">
+              <img src="../../../assets/images/DCutly.png">
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-8">
+            <div class="button_right">
+              <button type="submit" class="btn btn-login" [disabled]="true" >Login</button>
+              <button type="submit" class="btn btn-login" [disabled]="true">SignUp</button>
+              <button type="submit" class="btn btn-login" [disabled]="true">My URLs</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="header_below">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-12 offset-lg-1 left_side">
+            <div class="card">
+
+              <div class="card-body">
+                <div class="register-form">
+                  <div class="register-form">
+                    <form>
+                      <div class="form-group">
+                        <div>
+                        <label><strong>Enter The URL</strong></label>
+                        <input type="url" placeholder="Enter your URL here" [(ngModel)]="URLlink" [ngModelOptions]="{standalone: true}" class="form-control" [ngClass]="{ 'is-invalid': submitted &&  !URLlink,'disabled': submitted }" />
+                        <div *ngIf="submitted" class="error-message">
+                            <div *ngIf="URLlink.length < 6"> min length is 6 </div>
+                            <div *ngIf="!URLlink"> URL is required </div>
+                        </div>
+                        </div>
+                      </div>
+
+                      <div class="form-row row">
+                        <div class="form-group col-md-6">
+                          <label><strong>Customize Your Link</strong></label>
+                          <input type="text" [(ngModel)]="domainName"
+                            [ngModelOptions]="{standalone: true}" class="form-control" disabled="true"
+                            placeholder="D-Cutly.com" />
+                            <!-- <div *ngIf="submitted && f.Customize.errors" class="invalid-feedback">
+                            <div *ngIf="f.Customize.errors.required">required</div>
+                            <div *ngIf="f.Customize.errors.minlength">
+                              Customize Your link must be at least 6 characters
+                            </div>
+                            <div *ngIf="f.Customize.errors.maxlength">
+                              Customize link must not exceed 20 characters
+                            </div>
+                          </div> -->
+                        </div>
+
+                        <div class="form-group col-md-6">
+                          <label><strong>Alias</strong></label>
+                          <input type="text" [(ngModel)]="Alias" [ngModelOptions]="{standalone: true}"  class="form-control" placeholder="Alias" [ngClass]="{ 'disabled': submitted }" />
+                          <!-- <div *ngIf="submitted && f.Alias.errors" class="invalid-feedback">
+                            <div *ngIf="f.Alias.errors.required">Alias is required</div>
+                            <div *ngIf="f.Alias.errors.Alias">Alias is invalid</div>
+                          </div> -->
+                        </div>
+
+                      </div>
+
+                      <div class="form-group row">
+                        <!-- <div class="form-group col-md-12">
+                        <label><strong>Your URL</strong></label>
+                        <input type="text" [(ngModel)]="currentUrl"
+                          [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Alias" />
+
+                      </div> -->
+
+                        <div class="form-group col-md-12" *ngIf="submitted">
+                          <label><strong>Shorted URL</strong></label>
+                          <input type="text" [(ngModel)]="shortedUrl" disabled="true"
+                            [ngModelOptions]="{standalone: true}" class="form-control" placeholder="Shorted URL" />
+                        </div>
+                      </div>
+
+                      <button *ngIf="!submitted" (click)="onSubmit()" type="submit"
+                        class="btn btn-primary ">Short
+                        URL</button>
+                      <button type="button" (click)="onReset()" type="submit"
+                        class="btn btn-warning">
+                        Reset
+                      </button>
+
+                      <button *ngIf="submitted" (click)="copyText()" type="copy" class="btn btn-primary">Copy
+                        URL</button>
+
+                      <button *ngIf="submitted" type="submit"  (click)="btnClick();" target="_blank" class="btn btn-primary">Visit
+                        URL</button>
+
+                      </form>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-lg-4 col-md-12 offset-lg-1 right_side">
+            <h4><b>Welcome To </b><img class="img_left" src="../../../assets/images/DCutly.png"></h4>
+
+
+            <div class="url-img">
+                <h5>&#10004; Easy Link Shortening</h5>
+                <h5>&#10004; Full Link History</h5>
+                <h5>&#10004; Customized TinyURLs</h5>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,174 @@
+.bg-image {
+  background-image: url('../../../assets/images/hd_image.jpg');
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.header{
+  padding: 15px 0px;
+  border: 1px solid #2b6f9f;
+}
+.header{
+  .logo_img img{
+    width: 150px;
+  }
+}
+.header{
+  .button_right{
+    float: right;
+  }
+}
+.header{
+  .button_right{
+    button{
+      background-color: white;
+      font-size: 14px;
+      padding: 5px 10px;
+      font-weight: 500;
+      margin-left: 10px;
+      opacity: 1;
+      color: black;
+    }
+  }
+}
+
+.header_below{
+  padding-top: 90px;
+  .left_side{
+    .card{
+      .card-body{
+        padding: 40px 25px;
+          form{
+            .form-group{
+              margin-bottom: 20px;
+              label{
+                margin-bottom: 5px;
+                font-size: 14px;
+              }
+            }
+          }
+      }
+    }
+  }
+  .right_side{
+    padding-top: 45px;
+    h4{
+      color: white;
+      display: grid;
+      margin-left: 25px;
+    }
+    .img_left{
+      width: 150px;
+      margin: 20px 0px;
+    }
+    .url-img{
+      h5{
+        color: white;
+      }
+    }
+  }
+}
+
+.header_below .left_side .card .form-control{
+  font-size: 14px;
+}
+.header_below .left_side .card button{
+  font-size: 14px;
+    margin-right: 10px;
+    padding: 9px 18px;
+    color: white;
+}
+
+
+.register-form {
+  .form-group {
+    margin-bottom: 12px;
+  }
+}
+.card {
+  border-radius: 20px;
+}
+input.disabled{
+  background-color: #e9ecef;
+  pointer-events: none;
+}
+.error-message{
+  width: 100%;
+  margin-top: 0.25rem;
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+
+
+@media screen and (max-width: 991px){
+  .header{
+    padding: 8px 0px;
+  }
+  .header .logo_img img{
+    width: 100px;
+    margin-top: 7px;
+  }
+  .header{
+    .button_right{
+      button{
+        margin-left: 5px;
+        padding: 5px 5px;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .header_below{
+    padding-top: 50px;
+    .left_side{
+      .card{
+        .card-body{
+          padding: 15px;
+            form{
+              .form-group{
+                margin-bottom: 15px;
+                label{
+                  margin-bottom: 5px;
+                }
+              }
+            }
+        }
+      }
+    }
+  }
+
+  .header_below .right_side .url-img {
+    margin-top: 0;
+  }
+  .header_below .right_side .url-img h5{
+    font-size: 14px;
+  }
+  .header_below .right_side .img_left{
+    width: 100px;
+    margin: 10px 0px;
+  }
+
+  .header_below{
+    .right_side{
+      padding-top: 20px;
+      h4{
+        display: unset;
+      }
+    }
+  }
+
+}
+.status {
+  height: 48px;
+  background-color: #00c000;
+  text-align: center;
+  color: #fff;
+  line-height: 48px;
+  transition: background-color 1s ease;
+}
+
+.status.offline {
+  background-color: grey;
+}
